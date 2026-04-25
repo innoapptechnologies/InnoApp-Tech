@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Application - InnoApp Technologies</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .service-detail { padding-top: 150px; min-height: 80vh; }
+        .back-btn { margin-bottom: 30px; display: inline-block; color: var(--primary); text-decoration: none; font-weight: 600; }
+        .service-content h1 { font-size: 3rem; margin-bottom: 30px; }
+        .service-content p { font-size: 1.2rem; color: var(--text-gray); margin-bottom: 30px; line-height: 1.8; }
+        .features-list { list-style: none; margin-top: 40px; }
+        .features-list li { margin-bottom: 15px; display: flex; align-items: center; gap: 15px; font-size: 1.1rem; }
+        .features-list li i { color: var(--gold); }
+    </style>
+</head>
+<body class="dark-theme">
+    <header id="header" class="scrolled">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/logo.png" alt="InnoApp Logo">
+                <span>InnoAppTechnologies</span>
+            </a>
+            <div class="nav-cta">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=innoapptechnologies@gmail.com&su=Quote%20Request&body=Hello%2C%0A%0AI%27m%20interested%20in%20a%20quote.%20Please%20provide%20details." class="btn btn-glow" target="_blank" rel="noopener noreferrer">Get quote</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container service-detail">
+        <a href="../index.html#services" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Services</a>
+        <div class="service-content">
+            <h1 class="text-gradient">SaaS Application Development</h1>
+            <p>Our SaaS (Software as a Service) development services deliver cloud-based applications with subscription models, multi-tenant architecture, and scalable infrastructure. We build powerful SaaS solutions that help businesses generate recurring revenue while providing exceptional user experiences.</p>
+            
+            <div class="card-glass" style="padding: 40px; border-radius: 20px;">
+                <h3>Key Features</h3>
+                <ul class="features-list">
+                    <li><i class="fas fa-check-circle"></i> Multi-tenant Architecture</li>
+                    <li><i class="fas fa-check-circle"></i> Subscription Management System</li>
+                    <li><i class="fas fa-check-circle"></i> Cloud-based Infrastructure (AWS, Azure, GCP)</li>
+                    <li><i class="fas fa-check-circle"></i> Automated Billing & Payment Processing</li>
+                    <li><i class="fas fa-check-circle"></i> User Role & Permission Management</li>
+                    <li><i class="fas fa-check-circle"></i> Real-time Analytics & Dashboard</li>
+                    <li><i class="fas fa-check-circle"></i> API-first Design for Integrations</li>
+                    <li><i class="fas fa-check-circle"></i> Mobile-responsive Design</li>
+                </ul>
+            </div>
+
+            <div class="card-glass" style="padding: 40px; border-radius: 20px; margin-top: 30px;">
+                <h3>Technology Stack</h3>
+                <ul class="features-list">
+                    <li><i class="fas fa-check-circle"></i> Frontend: React, Vue.js, Angular</li>
+                    <li><i class="fas fa-check-circle"></i> Backend: Node.js, Python, Ruby on Rails</li>
+                    <li><i class="fas fa-check-circle"></i> Database: PostgreSQL, MongoDB, MySQL</li>
+                    <li><i class="fas fa-check-circle"></i> Cloud: AWS, Azure, Google Cloud</li>
+                    <li><i class="fas fa-check-circle"></i> DevOps: Docker, Kubernetes, CI/CD</li>
+                </ul>
+            </div>
+
+            <div class="card-glass" style="padding: 40px; border-radius: 20px; margin-top: 30px;">
+                <h3>Benefits</h3>
+                <ul class="features-list">
+                    <li><i class="fas fa-check-circle"></i> Recurring Revenue Model</li>
+                    <li><i class="fas fa-check-circle"></i> Lower Customer Acquisition Costs</li>
+                    <li><i class="fas fa-check-circle"></i> Easy Scalability & Updates</li>
+                    <li><i class="fas fa-check-circle"></i> Global Accessibility</li>
+                    <li><i class="fas fa-check-circle"></i> Reduced Maintenance Overhead</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Smooth scroll behavior for back button
+        document.querySelector('.back-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = '../index.html#services';
+        });
+    </script>
+</body>
+</html>

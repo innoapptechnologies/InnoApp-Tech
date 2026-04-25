@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="InnoApp Technologies builds premium, affordable modern digital experiences including website development, UI/UX design, and e-commerce solutions.">
+    <meta name="keywords" content="web development, UI UX design, e-commerce solutions, digital experiences, website design, app development">
+    <meta name="author" content="InnoApp Technologies">
+    <meta name="theme-color" content="#00f2ff">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="InnoApp">
+    <meta property="og:title" content="InnoApp Technologies - Premium Digital Solutions">
+    <meta property="og:description" content="Building premium, affordable modern digital experiences including website development, UI/UX design, and e-commerce solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/logo.png">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="InnoApp Technologies">
+    <meta name="twitter:description" content="Building premium, affordable modern digital experiences">
+    <meta name="twitter:image" content="./assets/logo.png">
+    <title>InnoApp Technologies</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body class="dark-theme">
+    <!-- 3D Canvas Background -->
+    <canvas id="three-canvas"></canvas>
+
+    <!-- Navigation -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="InnoApp Logo">
+                <div class="logo-text">
+                    <span class="logo-main">InnoApp</span>
+                    <span class="logo-sub">Technologies</span>
+                </div>
+            </a>
+            
+            <nav id="navbar">
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-cta">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=innoapptechnologies@gmail.com&su=Quote%20Request&body=Hello%2C%0A%0AI%27m%20interested%20in%20a%20quote.%20Please%20provide%20details." class="btn btn-glow" target="_blank" rel="noopener noreferrer">Get quote</a>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-wrapper">
+                <div class="hero-content" data-reveal="left">
+                    <span class="badge">Next-Gen Software Solutions</span>
+                    <h1><span class="text-gradient">WHEN YOUR APPLICATION MEETS OUR INNOVATION</span></h1>
+                    <p>Elevate your business with high-performance, visually stunning, and affordable web solutions tailored for the future.</p>
+                    <div class="hero-btns">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=innoapptechnologies@gmail.com&su=Quote%20Request&body=Hello%2C%0A%0AI%27m%20interested%20in%20a%20quote.%20Please%20provide%20details." class="btn btn-primary" target="_blank" rel="noopener noreferrer">Get quote</a>
+                        <a href="#portfolio" class="btn btn-outline">View Projects</a>
+                    </div>
+                </div>
+                <div class="hero-visual" data-reveal="right">
+                    <div class="floating-ui-container">
+                        <!-- CSS 3D Floating Elements -->
+                        <div class="float-card card-1">
+                            <i class="fas fa-code"></i>
+                            <span>Clean Code</span>
+                        </div>
+                        <div class="float-card card-2">
+                            <i class="fas fa-layer-group"></i>
+                            <span>Modern UI</span>
+                        </div>
+                        <div class="float-card card-3">
+                            <i class="fas fa-bolt"></i>
+                            <span>Fast Performance</span>
+                        </div>
+                        <!-- Placeholder for 3D Interactive Model -->
+                        <div class="hero-model-slot" id="desktop-model-slot">
+                            <div id="hero-3d-model"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mobile-model-section" aria-label="3D model showcase">
+            <div class="container">
+                <div class="mobile-model-card card-glass" data-reveal="bottom">
+                    <div class="mobile-model-slot" id="mobile-model-slot"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-padding">
+            <div class="container">
+                <div class="about-wrapper">
+                    <div class="about-img" data-reveal="left">
+                        <div class="glass-container">
+                            <img src="assets/logo.png" alt="InnoApp Innovation">
+                        </div>
+                        <p class="established-year">ESTABLISHED IN 2026</p>
+                    </div>
+                    <div class="about-content" data-reveal="right">
+                        <span class="section-subtitle">Who We Are</span>
+                        <h2 class="section-title">Innovating the Digital <span class="text-gradient">Landscape</span></h2>
+                        <p>At InnoApp Technologies, we believe in the power of digital transformation. Founded with a vision to make high-end technology accessible, we craft solutions that are not just functional but also visually captivating.</p>
+                        
+                        <div class="founders">
+                            <div class="founder-card card-glass">
+                                <div class="founder-info">
+                                    <h4>Syed Afrid M</h4>
+                                    <span>Founder & CEO</span>
+                                </div>
+                            </div>
+                            <div class="founder-card card-glass">
+                                <div class="founder-info">
+                                    <h4>Aafrin Fathima S</h4>
+                                    <span>Founder & MD</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="trust-features">
+                            <div class="trust-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Futuristic Design Language</span>
+                            </div>
+                            <div class="trust-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Affordable Premium Quality</span>
+                            </div>
+                            <div class="trust-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>24/7 Dedicated Support</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services section-padding">
+            <div class="container">
+                <div class="section-header center" data-reveal="bottom">
+                    <span class="section-subtitle">Our Expertise</span>
+                    <h2 class="section-title">Solutions for the <span class="text-gradient">Modern Era</span></h2>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card card-glass" data-reveal="bottom" data-delay="100">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Website Development</h3>
+                        <p>High-performance, responsive websites built with the latest technologies like React, Next.js, and Three.js.</p>
+                        <a href="services/website-development.html" class="learn-more">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-card card-glass" data-reveal="bottom" data-delay="200">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>WebApplication Development</h3>
+                        <p>Scalable, secure, and feature-rich web applications tailored to your specific business needs.</p>
+                        <a href="services/web-application.html" class="learn-more">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-card card-glass" data-reveal="bottom" data-delay="300">
+                        <div class="service-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>SaaS Application</h3>
+                        <p>Cloud-based Software as a Service solutions with subscription models, scalable architecture, and multi-tenant infrastructure for modern businesses.</p>
+                        <a href="services/saas-application.html" class="learn-more">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-card card-glass" data-reveal="bottom" data-delay="400">
+                        <div class="service-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>Business IT Projects</h3>
+                        <p>End-to-end IT solutions and project management to streamline your business operations.</p>
+                        <a href="services/business-it.html" class="learn-more">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-card card-glass" data-reveal="bottom" data-delay="500">
+                        <div class="service-icon">
+                            <i class="fas fa-pen-nib"></i>
+                        </div>
+                        <h3>Business Logo</h3>
+                        <p>Unique and professional logo designs that represent your brand identity and values.</p>
+                        <a href="services/business-logo.html" class="learn-more">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="service-card card-glass" data-reveal="bottom" data-delay="600">
+                        <div class="service-icon">
+                            <i class="fas fa-bezier-curve"></i>
+                        </div>
+                        <h3>UI/UX Design</h3>
+                        <p>User-centric design focusing on glassmorphism, smooth micro-interactions, and intuitive user journeys.</p>
+                        <a href="services/ui-ux-design.html" class="learn-more">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio section-padding">
+            <div class="container">
+                <div class="section-header" data-reveal="left">
+                    <span class="section-subtitle">Our Work</span>
+                    <h2 class="section-title">Our Previous <span class="text-gradient">Projects</span></h2>
+                </div>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item card-glass" data-reveal="bottom">
+                        <div class="portfolio-img">
+                            <span class="live-badge">LIVE</span>
+                            <div class="img-placeholder">VCAN 3D</div>
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>VCAN 3D</h3>
+                                    <span>3D Printing & Prototyping</span>
+                                    <a href="https://www.vcan3d.com" target="_blank" class="btn-view"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision & Moto Section -->
+        <section id="vision" class="vision section-padding">
+            <div class="container">
+                <div class="section-header center" data-reveal="bottom">
+                    <span class="section-subtitle">Our Vision And Moto</span>
+                    <h2 class="section-title">Driving Innovation <span class="text-gradient">With Purpose</span></h2>
+                </div>
+
+                <div class="vision-grid">
+                    <div class="vision-card card-glass" data-reveal="left">
+                        <div class="icon-box"><i class="fas fa-eye"></i></div>
+                        <h3>Our Vision</h3>
+                        <p>To become a global leader in providing accessible, cutting-edge digital solutions that empower businesses of all sizes to thrive in the modern era.</p>
+                    </div>
+                    <div class="vision-card card-glass" data-reveal="right">
+                        <div class="icon-box"><i class="fas fa-rocket"></i></div>
+                        <h3>Our Moto</h3>
+                        <p>Innovation at its best, affordable for all. We believe that high-end technology should be a standard, not a luxury.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Packages Section -->
+        <section id="packages" class="pricing section-padding">
+            <div class="container">
+                <div class="section-header center" data-reveal="bottom">
+                    <span class="section-subtitle">Simple Packages</span>
+                    <h2 class="section-title">Choose Your <span class="text-gradient">Package</span></h2>
+                </div>
+
+                <div class="pricing-grid">
+                    <div class="pricing-card card-glass" data-reveal="bottom">
+                        <div class="pricing-header">
+                            <h3>Starter</h3>
+                            <span class="plan-label">Package</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 5 Pages Website</li>
+                            <li><i class="fas fa-check"></i> Responsive Design</li>
+                            <li><i class="fas fa-check"></i> Basic SEO</li>
+                            <li><i class="fas fa-check"></i> 3 months Support</li>
+                            <li><i class="fas fa-check"></i> Contact Form Integration</li>
+                            <li><i class="fas fa-check"></i> Social Media Linking</li>
+                            <li><i class="fas fa-check"></i> Basic Speed Optimization</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Choose Package</a>
+                    </div>
+
+                    <div class="pricing-card card-glass popular" data-reveal="bottom" data-delay="100">
+                        <div class="popular-tag">Best Value</div>
+                        <div class="pricing-header">
+                            <h3>Business</h3>
+                            <span class="plan-label">Package</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 10 Pages Website</li>
+                            <li><i class="fas fa-check"></i> Advanced Animations</li>
+                            <li><i class="fas fa-check"></i> SEO Optimization</li>
+                            <li><i class="fas fa-check"></i> 6 months Support</li>
+                            <li><i class="fas fa-check"></i> WhatsApp Chat Integration</li>
+                            <li><i class="fas fa-check"></i> Custom UI Sections</li>
+                            <li><i class="fas fa-check"></i> Performance Tuning</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Choose Package</a>
+                    </div>
+
+                    <div class="pricing-card card-glass" data-reveal="bottom" data-delay="200">
+                        <div class="pricing-header">
+                            <h3>Premium</h3>
+                            <span class="plan-label">Package</span>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Unlimited Pages</li>
+                            <li><i class="fas fa-check"></i> Full 3D/Interactive</li>
+                            <li><i class="fas fa-check"></i> E-commerce Ready</li>
+                            <li><i class="fas fa-check"></i> 1 year Support</li>
+                            <li><i class="fas fa-check"></i> Admin Dashboard Setup</li>
+                            <li><i class="fas fa-check"></i> Payment Gateway Integration</li>
+                            <li><i class="fas fa-check"></i> Advanced Security Enhancements</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Choose Package</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info" data-reveal="left">
+                        <span class="section-subtitle">Get In Touch</span>
+                        <h2 class="section-title">Let's Create Something <span class="text-gradient">Amazing</span></h2>
+                        <p>Ready to start your next digital project? Reach out to us and let's discuss how we can help you grow.</p>
+                        
+                        <div class="contact-list">
+                            <a href="tel:+917200661807" class="contact-item">
+                                <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+                                <div class="text">
+                                    <span>Call Us</span>
+                                    <p>+91 7200661807</p>
+                                </div>
+                            </a>
+                            <a href="mailto:innoapptechnologies@gmail.com" class="contact-item">
+                                <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                                <div class="text">
+                                    <span>Email</span>
+                                    <p>innoapptechnologies@gmail.com</p>
+                                </div>
+                            </a>
+                            <a href="https://www.instagram.com/innoapp_technologies" class="contact-item" target="_blank" rel="noopener noreferrer">
+                                <div class="icon-box"><i class="fab fa-instagram"></i></div>
+                                <div class="text">
+                                    <span>Instagram</span>
+                                    <p>@innoapp_technologies</p>
+                                </div>
+                            </a>
+                            <a href="https://www.linkedin.com/company/innoapp-technologies/" class="contact-item" target="_blank" rel="noopener noreferrer">
+                                <div class="icon-box"><i class="fab fa-linkedin"></i></div>
+                                <div class="text">
+                                    <span>LinkedIn</span>
+                                    <p>innoapp-technologies</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-form-container card-glass" data-reveal="right">
+                        <form id="contact-form" action="#" method="POST">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Full Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Project Details" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-glow w-full">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </main>
+
+    <a href="#home" class="scroll-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Instagram Floating Button -->
+    <a href="https://www.instagram.com/innoapp_technologies" class="instagram-float" target="_blank">
+        <img src="assets/Insta logo.png" alt="Instagram">
+    </a>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/917200661807" class="whatsapp-float" target="_blank">
+        <img src="assets/wp logo.png" alt="WhatsApp">
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <a href="index.html" class="footer-logo-link"><img src="assets/logo.png" alt="InnoApp Logo" style="height:40px;vertical-align:middle;margin-right:12px;"></a>
+                <p>&copy; 2026 InnoApp Technologies. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/innoapp_technologies" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/innoapp-technologies/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/917200661807" target="_blank" class="wa-footer"><i class="fab fa-whatsapp"></i></a>
+                    <a href="tel:+917200661807"><i class="fas fa-phone-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
