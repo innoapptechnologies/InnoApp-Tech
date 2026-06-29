@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="InnoApp Technologies builds premium, affordable modern digital experiences including website development, UI/UX design, and e-commerce solutions.">
+    <meta name="theme-color" content="#00f2ff">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <title>Services - InnoApp Technologies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <canvas id="three-canvas"></canvas>
+
+    <header id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="InnoApp Logo">
+                <div class="logo-text">
+                    <span class="logo-main">InnoApp</span>
+                    <span class="logo-sub">Technologies</span>
+                </div>
+            </a>
+            
+            <nav id="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-cta">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=innoapptechnologies@gmail.com&su=Quote%20Request&body=Hello%2C%0A%0AI%27m%20interested%20in%20a%20quote.%20Please%20provide%20details." class="btn btn-glow">Get quote</a>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="services" class="services section-padding">
+            <div class="container">
+                <div class="section-header center" data-reveal="bottom">
+                    <span class="section-subtitle">Our Expertise</span>
+                    <h2 class="section-title">Solutions for the <span class="text-gradient">Modern Era</span></h2>
+                </div>
+
+                <div class="services-grid">
+                    <a href="services/website-development.html" class="service-card card-glass" data-reveal="bottom" data-delay="100">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Website Development</h3>
+                        <p>High-performance, responsive websites built with modern web technologies for optimal user experience.</p>
+                        <span class="learn-more">Explore <i class="fas fa-arrow-right"></i></span>
+                    </a>
+
+                    <a href="services/web-application.html" class="service-card card-glass" data-reveal="bottom" data-delay="200">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Web Application Development</h3>
+                        <p>Scalable, secure, and feature-rich web applications tailored to your specific business needs.</p>
+                        <span class="learn-more">Explore <i class="fas fa-arrow-right"></i></span>
+                    </a>
+
+                    <a href="services/saas-erp-solutions.html" class="service-card card-glass" data-reveal="bottom" data-delay="300">
+                        <div class="service-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>SaaS / ERP Solutions</h3>
+                        <p>Cloud-based Software as a Service and Enterprise Resource Planning solutions for modern businesses.</p>
+                        <span class="learn-more">Explore <i class="fas fa-arrow-right"></i></span>
+                    </a>
+
+                    <a href="services/ai-automation.html" class="service-card card-glass" data-reveal="bottom" data-delay="400">
+                        <div class="service-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI Automation & Integration</h3>
+                        <p>Intelligent automation solutions powered by AI to streamline workflows and boost productivity.</p>
+                        <span class="learn-more">Explore <i class="fas fa-arrow-right"></i></span>
+                    </a>
+
+                    <a href="services/mobile-app-development.html" class="service-card card-glass" data-reveal="bottom" data-delay="500">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile App Development</h3>
+                        <p>Native and cross-platform mobile applications that deliver seamless experiences on every device.</p>
+                        <span class="learn-more">Explore <i class="fas fa-arrow-right"></i></span>
+                    </a>
+
+                    <a href="services/custom-software-development.html" class="service-card card-glass" data-reveal="bottom" data-delay="600">
+                        <div class="service-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Custom Software Development</h3>
+                        <p>Tailored software solutions designed to address your unique business challenges and requirements.</p>
+                        <span class="learn-more">Explore <i class="fas fa-arrow-right"></i></span>
+                    </a>
+
+                    <a href="services/college-projects.html" class="service-card card-glass" data-reveal="bottom" data-delay="700">
+                        <div class="service-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>College Final Year IT Projects</h3>
+                        <p>Comprehensive guidance and development support for final year IT projects across all domains.</p>
+                        <span class="learn-more">Explore <i class="fas fa-arrow-right"></i></span>
+                    </a>
+
+                    <a href="services/ui-ux-design.html" class="service-card card-glass" data-reveal="bottom" data-delay="800">
+                        <div class="service-icon">
+                            <i class="fas fa-pen-nib"></i>
+                        </div>
+                        <h3>UI/UX Design & Brand Identity</h3>
+                        <p>User-centric design focusing on intuitive interfaces, smooth interactions, and strong brand identity.</p>
+                        <span class="learn-more">Explore <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="#" class="scroll-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <a href="https://www.instagram.com/innoapp_technologies" class="instagram-float" target="_blank">
+        <img src="assets/Insta logo.png" alt="Instagram">
+    </a>
+
+    <a href="https://wa.me/917200661807" class="whatsapp-float" target="_blank">
+        <img src="assets/wp logo.png" alt="WhatsApp">
+    </a>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><a href="tel:+917200661807"><i class="fas fa-phone-alt"></i> +91 7200661807</a></p>
+                    <p><a href="mailto:innoapptechnologies@gmail.com"><i class="fas fa-envelope"></i> innoapptechnologies@gmail.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/innoapp_technologies" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://www.linkedin.com/company/innoapp-technologies/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://wa.me/917200661807" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="services.html">Services</a>
+                        <a href="portfolio.html">Portfolio</a>
+                        <a href="packages.html">Packages</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 InnoApp Technologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

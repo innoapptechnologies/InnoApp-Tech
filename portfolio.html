@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="InnoApp Technologies builds premium, affordable modern digital experiences including website development, UI/UX design, and e-commerce solutions.">
+    <meta name="theme-color" content="#00f2ff">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <title>Portfolio - InnoApp Technologies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <canvas id="three-canvas"></canvas>
+
+    <header id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="InnoApp Logo">
+                <div class="logo-text">
+                    <span class="logo-main">InnoApp</span>
+                    <span class="logo-sub">Technologies</span>
+                </div>
+            </a>
+            
+            <nav id="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-cta">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=innoapptechnologies@gmail.com&su=Quote%20Request&body=Hello%2C%0A%0AI%27m%20interested%20in%20a%20quote.%20Please%20provide%20details." class="btn btn-glow">Get quote</a>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="portfolio" class="portfolio section-padding">
+            <div class="container">
+                <div class="section-header" data-reveal="left">
+                    <span class="section-subtitle">Our Work</span>
+                    <h2 class="section-title">Our Previous <span class="text-gradient">Projects</span></h2>
+                </div>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item card-glass" data-reveal="bottom">
+                        <div class="portfolio-img">
+                            <span class="live-badge">LIVE</span>
+                            <div class="img-placeholder">VCAN 3D</div>
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>VCAN 3D</h3>
+                                    <span>3D Printing & Prototyping</span>
+                                    <a href="https://www.vcan3d.com" class="btn-view"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="#" class="scroll-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <a href="https://www.instagram.com/innoapp_technologies" class="instagram-float" target="_blank">
+        <img src="assets/Insta logo.png" alt="Instagram">
+    </a>
+
+    <a href="https://wa.me/917200661807" class="whatsapp-float" target="_blank">
+        <img src="assets/wp logo.png" alt="WhatsApp">
+    </a>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><a href="tel:+917200661807"><i class="fas fa-phone-alt"></i> +91 7200661807</a></p>
+                    <p><a href="mailto:innoapptechnologies@gmail.com"><i class="fas fa-envelope"></i> innoapptechnologies@gmail.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/innoapp_technologies" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://www.linkedin.com/company/innoapp-technologies/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://wa.me/917200661807" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="services.html">Services</a>
+                        <a href="portfolio.html">Portfolio</a>
+                        <a href="packages.html">Packages</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 InnoApp Technologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

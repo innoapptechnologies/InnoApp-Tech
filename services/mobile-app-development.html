@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile App Development - InnoApp Technologies</title>
+    <link rel="icon" href="../assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .service-detail { padding-top: 150px; min-height: 80vh; }
+        .back-btn { margin-bottom: 30px; display: inline-block; color: var(--primary); text-decoration: none; font-weight: 600; }
+        .service-content h1 { font-size: 3rem; margin-bottom: 30px; }
+        .service-content p { font-size: 1.2rem; color: var(--text-gray); margin-bottom: 30px; line-height: 1.8; }
+        .features-list { list-style: none; margin-top: 40px; }
+        .features-list li { margin-bottom: 15px; display: flex; align-items: center; gap: 15px; font-size: 1.1rem; }
+        .features-list li i { color: var(--gold); }
+        .service-image { width: 100%; max-width: 800px; height: 400px; margin: 40px auto; background: linear-gradient(135deg, rgba(0,242,255,0.1), rgba(112,0,255,0.1)); border-radius: 20px; border: 1px solid var(--glass-border); display: flex; align-items: center; justify-content: center; font-size: 4rem; color: var(--primary); }
+    </style>
+</head>
+<body class="dark-theme">
+    <header id="header" class="scrolled">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../assets/logo.png" alt="InnoApp Logo">
+                <div class="logo-text">
+                    <span class="logo-main">InnoApp</span>
+                    <span class="logo-sub">Technologies</span>
+                </div>
+            </a>
+            <nav id="navbar">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../services.html">Services</a></li>
+                    <li><a href="../portfolio.html">Portfolio</a></li>
+                    <li><a href="../packages.html">Packages</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-cta">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=innoapptechnologies@gmail.com&su=Quote%20Request&body=Hello%2C%0A%0AI%27m%20interested%20in%20a%20quote.%20Please%20provide%20details." class="btn btn-glow">Get quote</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container service-detail">
+        <a href="../services.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Services</a>
+        <div class="service-content">
+            <h1 class="text-gradient">Mobile App Development</h1>
+            <p>Native and cross-platform mobile applications that deliver seamless experiences on every device. We build apps that users love with intuitive interfaces and powerful functionality.</p>
+            
+            <div class="service-image">
+                <i class="fas fa-mobile-alt"></i>
+            </div>
+
+            <div class="card-glass" style="padding: 40px; border-radius: 20px;">
+                <h3>Key Features</h3>
+                <ul class="features-list">
+                    <li><i class="fas fa-check-circle"></i> Cross-Platform Compatibility</li>
+                    <li><i class="fas fa-check-circle"></i> Native Performance Optimization</li>
+                    <li><i class="fas fa-check-circle"></i> Offline Functionality Support</li>
+                    <li><i class="fas fa-check-circle"></i> Push Notifications & Real-time Updates</li>
+                    <li><i class="fas fa-check-circle"></i> Secure Authentication & Data Encryption</li>
+                    <li><i class="fas fa-check-circle"></i> App Store Deployment & Maintenance</li>
+                </ul>
+            </div>
+
+            <div class="card-glass" style="padding: 40px; border-radius: 20px; margin-top: 30px;">
+                <h3>Technology Stack</h3>
+                <ul class="features-list">
+                    <li><i class="fas fa-check-circle"></i> Cross-Platform Frameworks: React Native, Flutter</li>
+                    <li><i class="fas fa-check-circle"></i> Native Development: Swift (iOS), Kotlin (Android)</li>
+                    <li><i class="fas fa-check-circle"></i> Backend-as-a-Service: Firebase, Supabase</li>
+                    <li><i class="fas fa-check-circle"></i> Local Databases: SQLite, Realm</li>
+                    <li><i class="fas fa-check-circle"></i> State & Navigation: Redux Toolkit, React Navigation, Bloc (Flutter)</li>
+                    <li><i class="fas fa-check-circle"></i> Deployment Platforms: App Store Connect, Google Play Console, TestFlight</li>
+                </ul>
+            </div>
+
+            <div class="card-glass" style="padding: 40px; border-radius: 20px; margin-top: 30px;">
+                <h3>Benefits</h3>
+                <ul class="features-list">
+                    <li><i class="fas fa-check-circle"></i> Wider Market Reach</li>
+                    <li><i class="fas fa-check-circle"></i> Enhanced Customer Engagement</li>
+                    <li><i class="fas fa-check-circle"></i> Improved Brand Loyalty</li>
+                    <li><i class="fas fa-check-circle"></i> Increased Revenue Streams</li>
+                    <li><i class="fas fa-check-circle"></i> Better Data Collection & Analytics</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><a href="tel:+917200661807"><i class="fas fa-phone-alt"></i> +91 7200661807</a></p>
+                    <p><a href="mailto:innoapptechnologies@gmail.com"><i class="fas fa-envelope"></i> innoapptechnologies@gmail.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/innoapp_technologies" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://www.linkedin.com/company/innoapp-technologies/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://wa.me/917200661807" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="../index.html">Home</a>
+                        <a href="../services.html">Services</a>
+                        <a href="../portfolio.html">Portfolio</a>
+                        <a href="../packages.html">Packages</a>
+                        <a href="../contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 InnoApp Technologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
