@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Gain industry-ready experience with InnoApp Technologies student internship programs. Explore hands-on tracks in Gen-AI, Full-stack, Web Development, and more.">
+    <meta name="theme-color" content="#00f2ff">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <title>Internships - InnoApp Technologies</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- 3D Canvas Background -->
+    <canvas id="three-canvas"></canvas>
+
+    <!-- Navigation Header -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="InnoApp Logo">
+                <div class="logo-text">
+                    <span class="logo-main">InnoApp</span>
+                    <span class="logo-sub">Technologies</span>
+                </div>
+            </a>
+            
+            <nav id="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="programs.html" class="active">Internships</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-cta">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=innoapptechnologies@gmail.com&su=Quote%20Request&body=Hello%2C%0A%0AI%27m%20interested%20in%20a%20quote.%20Please%20provide%20details." class="btn btn-glow">Get Quote</a>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="site-page">
+        <!-- Hero Section -->
+        <section class="section-padding" style="padding-bottom: 20px;">
+            <div class="container text-center" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <span class="badge" data-reveal="bottom">Student Training Hub</span>
+                <h1 class="text-gradient" data-reveal="bottom" data-delay="100" style="font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.2; margin-top: 15px; margin-bottom: 20px;">
+                    Next-Gen Internship Programs
+                </h1>
+                <p data-reveal="bottom" data-delay="200" style="font-size: 1.15rem; color: var(--text-gray); margin-bottom: 30px;">
+                    Accelerate your tech career with hands-on project-based internship tracks. Learn directly from industry experts, build cutting-edge applications, and receive professional certifications.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Programs Section -->
+        <section class="section-padding" style="padding-top: 20px; padding-bottom: 50px;">
+            <div class="container">
+                <div class="section-header center" data-reveal="bottom">
+                    <span class="section-subtitle">Choose Your Track</span>
+                    <h2 class="section-title">Available <span class="text-gradient">Internship Tracks</span></h2>
+                </div>
+
+                <div class="programs-grid is-compact" id="programs-container">
+                    <!-- Dynamic Program Cards Inserted Here via programs.js -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Admin Modal trigger is now globally in the footer -->
+    </main>
+
+
+    <!-- Floating Buttons -->
+    <a href="#" class="scroll-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <a href="https://www.instagram.com/innoapp_technologies" class="instagram-float" target="_blank">
+        <img src="assets/Insta logo.png" alt="Instagram">
+    </a>
+
+    <a href="https://wa.me/917200661807" class="whatsapp-float" target="_blank">
+        <img src="assets/wp logo.png" alt="WhatsApp">
+    </a>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/logo.png" alt="InnoApp Logo">
+                        <div class="logo-text">
+                            <span class="logo-main">InnoApp</span>
+                            <span class="logo-sub">Technologies</span>
+                        </div>
+                    </a>
+                    <div class="footer-tagline">
+                        <span class="tagline-main">When your application meets our innovation</span>
+                    </div>
+                </div>
+                <div class="footer-section footer-quick-links">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="services.html">Services</a>
+                        <a href="packages.html">Packages</a>
+                        <a href="portfolio.html">Portfolio</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Internships</h3>
+                    <div class="footer-links">
+                        <a href="programs.html">All Internship Programs</a>
+                        <a href="programs.html#ai">AI &amp; Machine Learning</a>
+                        <a href="programs.html#web">Web Development</a>
+                        <a href="programs.html#mobile">Mobile App Development</a>
+                        <a href="programs.html#data">Data Science</a>
+                        <a href="programs.html#cloud">Cloud Computing</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <div class="footer-links">
+                        <a href="services/website-development.html">Website Development</a>
+                        <a href="services/web-application.html">Web Application</a>
+                        <a href="services/saas-erp-solutions.html">SaaS / ERP Solutions</a>
+                        <a href="services/ai-automation.html">AI Automation</a>
+                        <a href="services/mobile-app-development.html">Mobile App Development</a>
+                        <a href="services/ui-ux-design.html">UI/UX Design</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><a href="tel:+917200661807"><i class="fas fa-phone-alt"></i> +91 7200661807</a></p>
+                    <p><a href="mailto:innoapptechnologies@gmail.com"><i class="fas fa-envelope"></i> innoapptechnologies@gmail.com</a></p>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/innoapp_technologies" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="https://www.linkedin.com/company/innoapp-technologies/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://wa.me/917200661807" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 InnoApp Technologies. All rights reserved. | <a href="admin.html" class="admin-footer-link"><i class="fas fa-lock"></i> Admin Login</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js" defer></script>
+    <script src="programs.js" defer></script>
+</body>
+</html>

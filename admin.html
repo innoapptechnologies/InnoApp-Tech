@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="InnoApp Technologies Admin Dashboard">
+    <meta name="theme-color" content="#00f2ff">
+    <title>Admin Dashboard - InnoApp Technologies</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body class="dark-theme">
+    <!-- 3D Canvas Background -->
+    <canvas id="three-canvas"></canvas>
+
+    <!-- Navigation -->
+    <header id="header" class="scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="InnoApp Logo">
+                <div class="logo-text">
+                    <span class="logo-main">InnoApp</span>
+                    <span class="logo-sub">Technologies</span>
+                </div>
+            </a>
+            
+            <nav id="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="programs.html">Internships</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-cta">
+                <a href="index.html" class="btn btn-outline">Back to Home</a>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="site-page container admin-main">
+        <!-- Verification / Login Panel -->
+        <div id="admin-login-section" class="admin-login-container card-glass">
+            <div class="admin-login-icon">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <h2 class="text-gradient admin-login-title">Admin Verification</h2>
+            <p class="admin-login-subtitle">Secure access to InnoApp Technologies dashboard management system.</p>
+            <form id="admin-login-form">
+                <div class="form-group">
+                    <label for="admin-email"><i class="fas fa-envelope"></i>Admin Email</label>
+                    <input type="email" id="admin-email" class="form-control" placeholder="Enter administrator email" required autocomplete="username">
+                </div>
+                <div class="form-group">
+                    <label for="admin-password"><i class="fas fa-key"></i>Password</label>
+                    <input type="password" id="admin-password" class="form-control" placeholder="Enter secure password" required autocomplete="current-password">
+                </div>
+                <button type="submit" class="btn btn-primary admin-login-btn">
+                    <i class="fas fa-sign-in-alt"></i>Access Dashboard
+                </button>
+            </form>
+        </div>
+
+        <!-- Admin Dashboard Content (Hidden by default) -->
+        <div id="admin-panel-content" class="admin-panel-content">
+            <div class="admin-dashboard-header">
+                <div>
+                    <h2 class="text-gradient"><i class="fas fa-chart-line"></i> InnoApp Admin Dashboard</h2>
+                    <p>Manage your website contents, internships, portfolio, and settings.</p>
+                </div>
+                <div class="admin-actions-top">
+                    <button class="btn btn-outline btn-sm" id="admin-reset-btn"><i class="fas fa-redo-alt"></i> Reset Defaults</button>
+                    <button class="btn btn-danger btn-sm" id="admin-logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                </div>
+            </div>
+
+            <!-- Stats Overview Banner -->
+            <div class="admin-stats-banner">
+                <div class="card-glass">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Active Programs</span>
+                    <strong id="stat-programs-count" class="text-gradient">0</strong>
+                </div>
+                <div class="card-glass">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Portfolio Companies</span>
+                    <strong id="stat-companies-count" class="text-gradient">0</strong>
+                </div>
+                <div class="card-glass">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Announcements</span>
+                    <strong id="stat-announcements-count" class="text-gradient">0</strong>
+                </div>
+                <div class="card-glass">
+                    <i class="fas fa-server"></i>
+                    <span>Gateway Status</span>
+                    <strong id="stat-gateway-status"><i class="fas fa-check-circle"></i> Connected</strong>
+                </div>
+            </div>
+
+            <!-- Tab Switcher Navigation -->
+            <div class="admin-tabs">
+                <button class="btn btn-primary btn-sm admin-tab-btn active" data-tab="programs-tab"><i class="fas fa-graduation-cap"></i> Programs</button>
+                <button class="btn btn-outline btn-sm admin-tab-btn" data-tab="companies-tab"><i class="fas fa-briefcase"></i> Portfolio Companies</button>
+                <button class="btn btn-outline btn-sm admin-tab-btn" data-tab="announcements-tab"><i class="fas fa-bullhorn"></i> Announcements</button>
+                <button class="btn btn-outline btn-sm admin-tab-btn" data-tab="settings-tab"><i class="fas fa-cog"></i> Settings</button>
+            </div>
+
+            <!-- TAB 1: PROGRAMS MANAGEMENT -->
+            <div id="programs-tab-content" class="admin-dashboard-grid">
+                <div class="admin-list-container card-glass">
+                    <h4>Active Programs</h4>
+                    <div id="admin-programs-list" class="admin-list">
+                        <!-- Rendered Dynamically -->
+                    </div>
+                </div>
+
+                <div class="admin-form-container card-glass">
+                    <h4 id="form-title">Add New Program</h4>
+                    <form id="admin-program-form">
+                        <div class="form-group">
+                            <label for="prog-title">Program Title</label>
+                            <input type="text" id="prog-title" class="form-control" placeholder="e.g. Generative AI Internship" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="prog-category">Category</label>
+                            <input type="text" id="prog-category" class="form-control" placeholder="e.g. Artificial Intelligence" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="prog-duration">Duration</label>
+                            <input type="text" id="prog-duration" class="form-control" placeholder="e.g. 4 Weeks" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="prog-description">Description</label>
+                            <textarea id="prog-description" class="form-control" rows="3" placeholder="Brief program overview" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="prog-topics">Topics (Comma separated)</label>
+                            <input type="text" id="prog-topics" class="form-control" placeholder="e.g. Topic 1, Topic 2, Topic 3" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="prog-rules">Rules & Regulations</label>
+                            <input type="text" id="prog-rules" class="form-control" placeholder="e.g. Complete all tasks. Certificate fee paid upon registering." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="prog-enroll-url">Google Form Link</label>
+                            <input type="url" id="prog-enroll-url" class="form-control" value="https://forms.gle/ufB737nkh61TSQH89" required>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Save Program</button>
+                            <button type="button" class="btn btn-outline" id="cancel-edit-btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- TAB 2: COMPANIES MANAGEMENT -->
+            <div id="companies-tab-content" class="admin-dashboard-grid">
+                <div class="admin-list-container card-glass">
+                    <h4>Portfolio Companies</h4>
+                    <div id="admin-companies-list" class="admin-list">
+                        <!-- Rendered Dynamically -->
+                    </div>
+                </div>
+
+                <div class="admin-form-container card-glass">
+                    <h4 id="comp-form-title">Add New Company</h4>
+                    <form id="admin-company-form">
+                        <div class="form-group">
+                            <label for="comp-name">Company Name</label>
+                            <input type="text" id="comp-name" class="form-control" placeholder="e.g. VCAN 3D" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="comp-category">Category</label>
+                            <select id="comp-category" class="form-control" required>
+                                <option value="" disabled selected>Select Category</option>
+                                <option value="Website Development">Website Development</option>
+                                <option value="Web Application">Web Application</option>
+                                <option value="Mobile App Development">Mobile App Development</option>
+                                <option value="SaaS / ERP Solutions">SaaS / ERP Solutions</option>
+                                <option value="AI Automation & Integration">AI Automation & Integration</option>
+                                <option value="Custom Software Development">Custom Software Development</option>
+                                <option value="UI/UX Design">UI/UX Design</option>
+                                <option value="College Projects">College Projects</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="comp-website">Company Website URL</label>
+                            <input type="url" id="comp-website" class="form-control" placeholder="e.g. https://www.vcan3d.com" required>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Save Company</button>
+                            <button type="button" class="btn btn-outline" id="cancel-comp-edit-btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- TAB 3: ANNOUNCEMENTS MANAGEMENT -->
+            <div id="announcements-tab-content" class="admin-dashboard-grid">
+                <div class="admin-list-container card-glass">
+                    <h4>Active Announcements</h4>
+                    <div id="admin-announcements-list" class="admin-list">
+                        <!-- Rendered Dynamically -->
+                    </div>
+                </div>
+
+                <div class="admin-form-container card-glass">
+                    <h4 id="ann-form-title">Add New Announcement</h4>
+                    <form id="admin-announcement-form">
+                        <div class="form-group">
+                            <label for="ann-title">Announcement Title</label>
+                            <input type="text" id="ann-title" class="form-control" placeholder="e.g. July Batch Admissions Open" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ann-text">Content Text</label>
+                            <textarea id="ann-text" class="form-control" rows="4" placeholder="Announcement details..." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="ann-image-url">Image URL</label>
+                            <input type="url" id="ann-image-url" class="form-control" placeholder="e.g. https://images.unsplash.com/... or local path" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ann-date">Date</label>
+                            <input type="text" id="ann-date" class="form-control" placeholder="e.g. July 15, 2026" required>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Save Announcement</button>
+                            <button type="button" class="btn btn-outline" id="cancel-ann-edit-btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- TAB 4: SETTINGS MANAGEMENT -->
+            <div id="settings-tab-content">
+                <form id="admin-settings-form">
+                    <div class="settings-grid">
+                        <div class="card-glass settings-card full-width">
+                            <h4><i class="fas fa-link"></i> Endpoints Configuration</h4>
+                            <div class="form-group">
+                                <label for="settings-form-action">Google Form Response URL</label>
+                                <input type="url" id="settings-form-action" class="form-control" placeholder="https://docs.google.com/forms/d/e/.../formResponse" required>
+                                <span class="form-help">Make sure it ends with `/formResponse` (not `/viewform`).</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="settings-razorpay-btn-id">Razorpay Payment Button ID</label>
+                                <input type="text" id="settings-razorpay-btn-id" class="form-control" placeholder="e.g. pl_TDqchZOzs0xsbH" required>
+                            </div>
+                        </div>
+
+                        <div class="card-glass settings-card">
+                            <h4><i class="fas fa-file-invoice"></i> Google Form Field Mappings (Part 1)</h4>
+                            <div class="form-group">
+                                <label for="settings-entry-name">Name Field ID</label>
+                                <input type="text" id="settings-entry-name" class="form-control" placeholder="entry.1234567" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="settings-entry-email">Email Field ID</label>
+                                <input type="text" id="settings-entry-email" class="form-control" placeholder="entry.1234567" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="settings-entry-phone">WhatsApp Number Field ID</label>
+                                <input type="text" id="settings-entry-phone" class="form-control" placeholder="entry.1234567" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="settings-entry-college">College Name Field ID</label>
+                                <input type="text" id="settings-entry-college" class="form-control" placeholder="entry.1234567" required>
+                            </div>
+                        </div>
+
+                        <div class="card-glass settings-card">
+                            <h4><i class="fas fa-file-invoice"></i> Google Form Field Mappings (Part 2)</h4>
+                            <div class="form-group">
+                                <label for="settings-entry-degree">Degree & Branch Field ID</label>
+                                <input type="text" id="settings-entry-degree" class="form-control" placeholder="entry.1234567" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="settings-entry-year">Graduation Year Field ID</label>
+                                <input type="text" id="settings-entry-year" class="form-control" placeholder="entry.1234567" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="settings-entry-track">Selected Track Field ID</label>
+                                <input type="text" id="settings-entry-track" class="form-control" placeholder="entry.1234567" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="settings-entry-option">Reg Option Field ID (Free vs Premium)</label>
+                                <input type="text" id="settings-entry-option" class="form-control" placeholder="entry.1234567" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="settings-entry-payment-id">Razorpay Payment ID Field ID</label>
+                                <input type="text" id="settings-entry-payment-id" class="form-control" placeholder="entry.1234567" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions-right">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save Configuration Settings</button>
+                    </div>
+                </form>
+
+                <!-- Configuration Instructions -->
+                <div class="card-glass settings-help">
+                    <h5><i class="fas fa-info-circle"></i> Finding Google Form Field Entry IDs</h5>
+                    <ol>
+                        <li>Open your Google Form. Click the eye icon (Preview) in the top-right.</li>
+                        <li>Right-click on any input field and select <strong>Inspect</strong>.</li>
+                        <li>Find the HTML element for the input (usually a `name` attribute like <code>name="entry.XXXXXX"</code>).</li>
+                        <li>Copy and paste that entry name into the corresponding input field above.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <a href="#" class="scroll-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <a href="https://www.instagram.com/innoapp_technologies" class="instagram-float" target="_blank">
+        <img src="assets/Insta logo.png" alt="Instagram">
+    </a>
+
+    <a href="https://wa.me/917200661807" class="whatsapp-float" target="_blank">
+        <img src="assets/wp logo.png" alt="WhatsApp">
+    </a>
+
+    <!-- Three.js and JS Logic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js" defer></script>
+    <script src="programs.js" defer></script>
+    <script src="admin.js" defer></script>
+</body>
+</html>
