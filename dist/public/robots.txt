@@ -1,0 +1,18 @@
+# robots.txt for InnoApp Technologies
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin/private areas
+Allow: /services
+Allow: /about
+Allow: /work
+Allow: /packages
+Allow: /internships
+Allow: /contact
+
+# Sitemap location
+Sitemap: https://innoapp-tech.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
